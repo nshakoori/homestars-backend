@@ -6,5 +6,6 @@ RSpec.describe User, type: :model do
   end
 
   it { should validate_presence_of :name }
+  it { should belong_to(:room) }
   it { should have_many(:messages) }
 end

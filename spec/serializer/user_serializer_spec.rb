@@ -10,6 +10,7 @@ RSpec.describe UserSerializer, type: :serializer do
     expect(subject.keys).to contain_exactly(
       'id',
       'name',
+      'room_id'
     )
   end
   
@@ -19,5 +20,9 @@ RSpec.describe UserSerializer, type: :serializer do
   
   it 'should have a user name that matches' do
     expect(subject['name']).to eq(user.name)
+  end
+  
+  it 'should have a room_id that matches' do
+    expect(subject['room_id']).to eq(user.room_id)
   end
 end
